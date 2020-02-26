@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ListItem from './listitem'
+import PropTypes from 'prop-types';
 
-function ToDoList(){
-  return(
-    <div >  
-      <h1>TO DO LIST</h1>
-    </div>
-  );
+class ToDoList extends Component{
+    
+    render(){
+        return this.props.list.map((e) =>(
+          <ListItem key = {e.id} items = {e}/>
+        ));
+  }
 }
 
-
+ToDoList.propTypes = {
+  list: PropTypes.array.isRequired
+}
 
 export default ToDoList;
