@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 class ToDoList extends Component{
     
     render(){
-        return this.props.list.map((e) =>(
+        return this.props.ls.map((e) =>(
           <ListItem key = {e.id} items = {e}/>
         ));
   }
 }
 
 ToDoList.propTypes = {
-  list: PropTypes.array.isRequired
+  ls: PropTypes.array.isRequired
 }
 
 export default ToDoList;

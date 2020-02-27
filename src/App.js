@@ -27,7 +27,7 @@ class App extends React.Component{
     return(
       <div className="App">  
         <h1>Hello</h1>
-        <ToDoList list = {this.state.ls}/>
+        <ToDoList ls = {this.state.ls}/>
       </div>
     );
   }
